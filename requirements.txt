@@ -1,0 +1,5 @@
+Flask==2.0.2
+python-telegram-bot==13.10
+PyYAML~=6.0
+mcstatus~=8.0.0
+google-api-python-client==2.36.0
