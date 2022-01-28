@@ -1,5 +1,8 @@
-*.yaml
+.env.yaml
+config.yaml
 *.venv
 venv/
 key_file.json
 test.py
+.idea
+.vscode
