@@ -1,6 +1,7 @@
 .env.yaml
 config.yaml
 *.venv
+*.secret
 venv/
 key_file.json
 test.py
