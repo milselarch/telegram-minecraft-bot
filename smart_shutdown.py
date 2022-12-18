@@ -1,9 +1,15 @@
 import os
 import time
 import traceback
+import socket
 
 from datetime import datetime
 from mcstatus import MinecraftServer
+
+NETWORK_ERRORS = (
+    ConnectionRefusedError, ConnectionResetError,
+    BrokenPipeError, socket.timeout
+)
 
 try:
     lookup_delay = 20
@@ -21,7 +27,7 @@ try:
         try:
             status = server.status()
             num_players = status.players.online
-        except (ConnectionRefusedError, ConnectionResetError) as e:
+        except NETWORK_ERRORS as e:
             pass
 
         if num_players > 0:
